@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Rendering">
+      <UniqueIdentifier>{E3AE1F7C-4F19-D4F2-9857-85980401B247}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering\GlBindings">
+      <UniqueIdentifier>{B338F65E-9FC7-7F28-48E6-9323345490CE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="math">
+      <UniqueIdentifier>{CF809A7C-BBB7-9B0D-64A4-811050BA170F}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Rendering\GlBindings\GlBindings.h">
+      <Filter>Rendering\GlBindings</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Rendering\GlBindings\glext.h">
+      <Filter>Rendering\GlBindings</Filter>
+    </ClInclude>
+    <ClInclude Include="src\math\math.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\window.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Main.cpp" />
+    <ClCompile Include="src\Window.cpp" />
+  </ItemGroup>
+</Project>
