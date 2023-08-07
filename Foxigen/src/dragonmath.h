@@ -12,6 +12,13 @@ struct uivec3 {
 	unsigned int z = 0;
 
 
+	uivec3()
+	{
+		x = 0;
+		y = 0;
+		z = 0;
+	}
+
 	uivec3(int lx, int ly, int lz)
 	{
 		x = lx;

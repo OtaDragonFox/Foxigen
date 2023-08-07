@@ -17,6 +17,8 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {
 
     CORE.Get().m_gameWindow.get()->updateWindowResulution(width,height);
+    
+
 }
 
 
@@ -59,6 +61,9 @@ bool Window::createWindow()
 
     glViewport(0, 0, 640, 480);
 
+	windowsize = vec2(640, 480);
+
+
     glfwSetFramebufferSizeCallback(m_app_window, framebuffer_size_callback);
 
     lastTime = float(glfwGetTime());
@@ -94,4 +99,7 @@ void Window::calculateDeltaTime(float & deltaTime)
 
 void Window::updateWindowResulution(int width, int height)
 {
+    windowsize = vec2(width, height);
+	glViewport(0, 0, width, height);
+
 }

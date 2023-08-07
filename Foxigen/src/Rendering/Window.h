@@ -29,6 +29,8 @@ public:
 
     GLFWwindow* m_app_window;
 
+    vec2 windowsize;
+
 private:
 	vec3 bgColor = vec3(1,0,0);
 

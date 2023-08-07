@@ -13,12 +13,14 @@ public:
 	}
 
 
-	virtual void Shutdown(const char* requestID);
+	void Shutdown(const char* requestID);
 
-	virtual void Startup();
+	void Startup();
 
 	DragonPTR(Window)m_gameWindow;
 	DragonPTR(Input)m_gameInput;
+	static Main s_instance;
+
 private:
 	bool m_isRunning = true;
 
@@ -30,10 +32,9 @@ private:
 
 	Main() {}
 
-	virtual void InitializeComponents();
-	virtual void Loop();
+	void InitializeComponents();
+	void Loop();
 
-	static Main s_instance;
 
 };
 

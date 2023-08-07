@@ -22,28 +22,19 @@ public:
 	void updateMesh();
 
 	void renderMesh();
-
+	void generateMesh();
 private:
 	//create memory arenas and request memory chunks from there.
-	meshData vertices[4] = {
-		//first triangle
-		meshData(vec3(0.5f,0.5f,0.0f),vec2(1.0f,0.0f)),
-		meshData(vec3(0.5f,-0.5f,0.0f),vec2(1.0f,1.0f)),
-		meshData(vec3(-0.5f,-0.5f,0.0f),vec2(0.0f,1.0f)),
-		meshData(vec3(-0.5f,0.5f,0.0f),vec2(0.0f,0.0f))
-
-		//	meshData(vec3(0.5f,0.5f,0.0f),vec2(0.0f,0.0f)),
-		//meshData(vec3(0.5f,-0.5f,0.0f),vec2(0.0f,1.0f)),
-		//meshData(vec3(-0.5f,-0.5f,0.0f),vec2(1.0f,1.0f)),
-		//meshData(vec3(-0.5f,0.5f,0.0f),vec2(1.0f,0.0f))
-
-	};
-	uivec3 indices[2]{
-		uivec3(0,1,3),
-		uivec3(1,2,3)
-	};
-
 	
+	int numvert;
+	meshData* vertices;
+
+	int* indices;
+	int numindicies;
+
+	unsigned int triangles;
+	
+
 
 
 	material Material;

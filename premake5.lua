@@ -23,7 +23,7 @@ group ""
 project "Foxigen"
 
     location "Foxigen"
-    kind "StaticLib"
+    kind "ConsoleApp"
     language "c++"
     cppdialect "C++20"
     staticruntime "on"
@@ -79,50 +79,3 @@ project "Foxigen"
         runtime "Release"
         optimize "on"
 
-project "CodeDot"
-    location "CodeDot"
-    kind "ConsoleApp"
-    language "c++"
-    cppdialect "C++20"
-    staticruntime "on"
-
-    files{
-        "CodeDot/src/**.h",
-        "CodeDot/src/**.hpp",
-        "CodeDot/src/**.cpp",
-        "CodeDot/assets/**"
-    }
-
-    includedirs
-    {
-		"Foxigen/src",
-		"ThirdParty",
-		"%{IncludeDir.GLFW}",
-        "%{IncludeDir.Glad}",
-        "%{IncludeDir.glm}",
-        "%{IncludeDir.spdlog}"
-
-	}
-
-    links
-	{
-		"Foxigen"
-	}
-
-    targetdir( outputdir .. "/CodeDot")
-    objdir("bin-int/" .. outputdir .. "/CodeDot")
-
-
-
-    filter "system:windows"
-    systemversion "latest"
-    
-    filter "configurations:Debug"
-        defines "DRG_Debug"
-        runtime "Debug"
-        symbols "on"
-
-    filter "configurations:Release"
-        defines "DRG_Release"
-        runtime "Release"
-        optimize "on"
