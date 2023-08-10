@@ -1,7 +1,7 @@
 #pragma once
-#include "Modules/IO/File.h"
-#include "Rendering/Window.h"
-#include "Modules/IO/Input.h"
+#include "core/Modules/IO/File.h"
+#include "core/Rendering/Window.h"
+#include "core/Modules/IO/Input.h"
 
 class Main
 {
